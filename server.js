@@ -15,5 +15,5 @@ app.get("/",function(req,res)
    res.send(person);
 });
 
-app.use(express.static(path.join(__dirname,'public')));
+app.use(exp.static(path.join(__dirname,'public')));
 
