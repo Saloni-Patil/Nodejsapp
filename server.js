@@ -22,16 +22,7 @@ var express = require('express');
 var app= express();
 var path = require('path');
 
-app.use(express.static(path.join(__dirname,'Public')));
-
-
-
-app.get('/',function(req,res){
-
-    var person = {fname:"salu"}
-
-    res.send(person);
-});
+app.use(express.static(path.join(__dirname,'public')));
 
 var server = app.listen(9000,function(req,res){
 
@@ -40,6 +31,14 @@ var server = app.listen(9000,function(req,res){
 
     console.log("ahe ithecgh");
 
+});
+
+
+app.get('/',function(req,res){
+
+    var person = {fname:"salu"}
+
+    res.send(person);
 });
 
 
